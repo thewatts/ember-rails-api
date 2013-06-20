@@ -3,8 +3,12 @@
     <div class='container'>
       <div class='nav-collapse collapse'>
         <ul class='nav'>
-          <li>{{#linkTo 'index'}}Home{{/linkTo}}</li>
-          <li>{{#linkTo 'users'}}Users{{/linkTo}}</li>
+          <li {{bindAttr class="isHome:active"}}>
+            {{#linkTo 'index'}}Home{{/linkTo}}
+          </li>
+          <li {{bindAttr class="isUsers:active"}}>
+            {{#linkTo 'users'}}Users{{/linkTo}}
+          </li>
         </ul>
       </div>
     </div>

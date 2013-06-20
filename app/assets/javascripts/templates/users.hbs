@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<div class="span3">
+  <table class='table table-striped'>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    {{#each user in controller}}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>
+          {{#linkTo "users.show" user}}
+            {{ user.fullName }}
+          {{/linkTo}}
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+<div class="span8">
+  {{ outlet }}
+</div>
